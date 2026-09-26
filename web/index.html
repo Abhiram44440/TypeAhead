@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autocomplete Engine</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> LOCAL INTELLIGENCE</div>
+      <h1>Find the right<br><em>word</em>, faster.</h1>
+      <p>Your private autocomplete engine learns from every selection.</p>
+    </section>
+    <section class="search-card" aria-label="Autocomplete search">
+      <label for="prefix">Start typing</label>
+      <div class="input-wrap">
+        <span class="search-icon">⌕</span>
+        <input id="prefix" type="search" autocomplete="off" placeholder="Try “pro”, “auto”, or “design”" autofocus>
+        <kbd>ESC</kbd>
+      </div>
+      <p id="hint" class="hint">Enter at least one letter to see suggestions.</p>
+      <ol id="suggestions" class="suggestions" aria-live="polite"></ol>
+      <div id="empty" class="empty" hidden>No matching words. Try a different prefix.</div>
+      <footer><span>↑ ↓ to navigate</span><span>↵ to select</span><span>Results improve as you choose</span></footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
